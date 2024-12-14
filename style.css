@@ -105,3 +105,21 @@ a {
 a:hover {
   text-decoration: underline;
 }
+<<<<<<< Updated upstream
+=======
+button:hover{
+    background-color: #0056b3;
+}
+
+#Ads{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.add-div{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+>>>>>>> Stashed changes
