@@ -329,7 +329,7 @@ button:hover {
   margin: 0 auto;
 }
 
-.content{
+.content {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -337,19 +337,20 @@ button:hover {
   background-color: #0c0c0c;
 }
 
-.foot-content{
+.foot-content {
   display: flex;
   flex-direction: column;
   width: 33%;
   margin: 50px;
 }
 
-.insta{
+.insta {
   width: 50px;
   height: 50px;
 }
 
-.foot-content a,p{
+.foot-content a,
+p {
   color: white;
   text-decoration: none;
   font-family: "Montserrat", Sans-serif;
@@ -358,35 +359,38 @@ button:hover {
   margin-top: 20px;
 }
 
-.whatsapp{
+.whatsapp {
   margin-left: -370px;
 }
 
-.mail{
+.mail {
   margin-left: -300px;
 }
 
-.whatsapp img{
-  margin-bottom:-5px ;
+.whatsapp img {
+  margin-bottom: -5px;
   width: 20px;
   height: 20px;
   margin-top: 20px;
 }
 
-.mail img{
-  margin-bottom:-5px ;
+.mail img {
+  margin-bottom: -5px;
   width: 20px;
   height: 20px;
   margin-top: 20px;
 }
 
-.location{
+.location {
   display: flex;
 }
 
-.location img{
+.location img {
   width: 25px;
   height: 25px;
   margin-top: 15px;
   margin-left: -3px;
+}
+#ngjyra {
+  color: #000000;
 }
