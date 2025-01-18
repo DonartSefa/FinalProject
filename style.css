@@ -364,7 +364,7 @@ p {
 }
 
 .mail {
-  margin-left: -300px;
+    margin-left: -300px;
 }
 
 .whatsapp img {
@@ -383,6 +383,7 @@ p {
 
 .location {
   display: flex;
+  margin-left:-50px;
 }
 
 .location img {
@@ -393,4 +394,8 @@ p {
 }
 #ngjyra {
   color: #000000;
+}
+
+#black{
+  color: black;
 }
