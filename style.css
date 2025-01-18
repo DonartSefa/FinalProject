@@ -307,3 +307,65 @@ button:hover{
     justify-content: center;
     margin: 0 auto;
 }
+
+.content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+  background-color: #0c0c0c;
+}
+
+.foot-content{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: 50px;
+}
+
+.insta{
+  width: 50px;
+  height: 50px;
+}
+
+.foot-content a,p{
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+}
+
+.whatsapp{
+  margin-left: -370px;
+}
+
+.mail{
+  margin-left: -300px;
+}
+
+.whatsapp img{
+  margin-bottom:-5px ;
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.mail img{
+  margin-bottom:-5px ;
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.location{
+  display: flex;
+}
+
+.location img{
+  width: 25px;
+  height: 25px;
+  margin-top: 15px;
+  margin-left: -3px;
+}

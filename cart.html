@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+  <header>
+    <section id="header">
+      <div class="container">
+          <div class="header">
+              <div class="first-piece">
+                  <div class="logo">
+                      <img id="logo" src="img/catch.png" alt="">
+                  </div>
+                  <div class="search">
+                      <input type="text" id="searchbar" placeholder="What are you looking for?">
+                      <button type="submit"><img class="srch" src="img/search.png" alt=""></button>
+                  </div>
+                  <div class="items">
+                      <div class="acc-it">
+                          <div class="it-cont">
+                              <img class="acc" src="img/help.png" alt="">
+                              <p>Help</p>
+                              <div class="dropdown">
+                                  <div class="dropdown-item">
+                                      <img src="img/dial.png" alt="">
+                                      <a href="mailto:catchcomercial@gmail.com"
+                                          class="contact-link">catchcomercial@gmail.com</a>
+                                  </div>
+                                  <div class="dropdown-item">
+                                      <img src="img/whatsapp.png" alt="">
+                                      <a href="https://wa.me/+38345725033" class="contact-link">+(383) 45 726 033</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="acc-it">
+                          <div class="it-acc">
+                                  <img class="user" src="img/acc.png" >    
+                              
+                              <p>My Account</p>
+                              <div class="dropdown2">
+                                  <div class="dropdown2-item">
+                                      <div class="reg-log">
+                                          <a href="register.html">Register</a>
+                                          <a href="login.html">Log in</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="acc-it">
+                          <a href="cart.html">
+                              <img class="cart" src="img/cart.png" alt="">
+                          </a>
+                          <p><a href="cart.html" id="cart-page-link">My Cart (<span id="cart-count">0</span>)</a></p>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="white-line"></div>
+              <div class="PAGES">
+                  <div class="categories">
+                    <a href="index.html">HOME</a>
+                    <a href="shop.html">SHOP</a>
+                    <a href="stores.html">STORES</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <button class="back-button"><a href="shop.html">Back to Products</a></button>
+    <h1>Your Cart</h1>
+  </header>
+
+  <main>
+    <ul id="cart-items"></ul>
+    <button id="clear-cart">Clear Cart</button>
+  </main>
+
+
+<style>
+  main {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  ul li {
+    font-family: arial;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #797979;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  h1{
+    font-family: arial;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-bottom: -30px;
+  }
+
+  a{
+  text-decoration: none;
+  color: white;
+  }
+
+  #clear-cart {
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 14px;
+    }
+  
+  #clear-cart:hover {
+    background-color: #252525;
+    transition: 0.5s ease-in-out;
+  }
+
+  .back-button {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    color: #fff;
+    background: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 0px;
+  }
+
+  .back-button:hover {
+    background: rgb(43, 43, 43);
+    transform: scale(1.1);
+  }
+
+  .back-button:active {
+    transform: scale(0.98);
+  }
+
+  .content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+  background-color: #0c0c0c;
+}
+
+.foot-content{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: 50px;
+}
+
+.insta{
+  width: 50px;
+  height: 50px;
+}
+
+.foot-content a,p{
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+}
+
+.whatsapp img{
+  margin-bottom:-5px ;
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.mail img{
+  margin-bottom:-5px ;
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.location{
+  display: flex;
+}
+
+.location img{
+  width: 25px;
+  height: 25px;
+  margin-top: 15px;
+  margin-left: -3px;
+}
+
+</style>
+
+<script>
+  // Get cart data from localStorage
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartItems = document.getElementById("cart-items");
+
+  // Populate cart items
+  if (cart.length > 0) {
+    cart.forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} - ${item.price}`;
+      cartItems.appendChild(li);
+    });
+  } else {
+    cartItems.innerHTML = "<p>Your cart is empty!</p>";
+  }
+
+  // Clear cart
+  document.getElementById("clear-cart").addEventListener("click", () => {
+    localStorage.removeItem('cart');
+    cartItems.innerHTML = "<p>Your cart is empty!</p>";
+  });
+</script>
+</body>
+
+<footer class="footer">
+  <div class="content">
+
+      <div class="foot-content">
+          <a href="index.html">HOME</a>
+          <a href="shop.html">SHOP</a>
+          <a href="stores.html">STORES</a>
+          <a href="login.html">LOGIN</a>
+      </div>
+
+      <div class="foot-content">
+          <div class="whatsapp">
+              <img src="img/whatsapp.png" alt="">
+              <a href="https://wa.me/+38345725033" class="contact-link">+(383) 45 726 033</a>
+          </div>
+          <div class="mail">
+              <img src="img/dial.png" alt="">
+              <a href="mailto:catchcomercial@gmail.com" class="contact-link">catchcomercial@gmail.com</a>
+          </div>
+          <div class="location">
+              <img src="img/location.png" alt="">
+              <p>Godoy Cruz 1720 (CABA)</p>
+          </div>
+      </div>
+
+      <div class="foot-content">
+          <a href=""><img class="insta" src="img/insta.png" alt=""></a>
+
+      </div>
+
+  </div>
+</footer>
+
+</html>

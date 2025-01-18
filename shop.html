@@ -14,10 +14,13 @@
             <div class="header">
                 <div class="first-piece">
                     <div class="logo">
-                        <img id="logo" src="img/catch.png" alt="">
+                        <a href="index.html">
+                            <img id="logo" src="img/catch.png" alt="">
+                        </a>
+                        
                     </div>
                     <div class="search">
-                        <input type="text" id="searchbar" placeholder="What are you looking for?">
+                        <input type="text" id="searchbar" placeholder="What are you looking for?"  oninput="filterProducts()">
                         <button type="submit"><img class="srch" src="img/search.png" alt=""></button>
                     </div>
                     <div class="items">
@@ -41,7 +44,8 @@
 
                         <div class="acc-it">
                             <div class="it-acc">
-                                <img class="user" src="img/acc.png" alt="">
+                                    <img class="user" src="img/acc.png" >    
+                                
                                 <p>My Account</p>
                                 <div class="dropdown2">
                                     <div class="dropdown2-item">
@@ -54,8 +58,10 @@
                             </div>
                         </div>
                         <div class="acc-it">
-                            <img class="cart" src="img/cart.png" alt="">
-                            <p>My Cart</p>
+                            <a href="cart.html">
+                                <img class="cart" src="img/cart.png" alt="">
+                            </a>
+                            <p><a href="cart.html" id="cart-page-link">My Cart (<span id="cart-count">0</span>)</a></p>
                         </div>
                     </div>
                 </div>
@@ -63,14 +69,15 @@
                 <div id="white-line"></div>
                 <div class="PAGES">
                     <div class="categories">
-                        <a href="">HOME</a>
-                        <a href="">SHOP</a>
-                        <a href="">STORES</a>
+                        <a href="index.html">HOME</a>
+                        <a href="shop.html">SHOP</a>
+                        <a href="stores.html">STORES</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <header>
 
     <div id="notification" class="hidden">
         <span class="icon">🛒</span>
@@ -79,7 +86,7 @@
 
     <section id="home-sales">
         <div class="cards">
-            <div class="card">
+            <div class="card" data-id="1" data-name="Bermuda Goth">
                 <img src="img/model14.jpg" alt="">
                 <h3>BERMUDA GOTH</h3>
                 <h2>$52.37 USD</h2>
@@ -88,7 +95,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-id="2" data-name="Collar Craf">
                 <img src="img/model15.jpg" alt="">
                 <h3>COLLAR CRAF</h3>
                 <h2>$6.23 USD</h2>
@@ -97,7 +104,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-id="3" data-name="Rinonera Catch">
                 <img src="img/model16.jpg" alt="">
                 <h3>RINONERA CATCH</h3>
                 <h2>$19.23 USD</h2>
@@ -106,7 +113,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-name="Piluso Catch">
                 <img src="img/model17.jpg" alt="">
                 <h3>Piluso CATCH</h3>
                 <h2>$18.72 USD</h2>
@@ -117,7 +124,7 @@
         </div>
 
         <div class="cards">
-            <div class="card">
+            <div class="card" data-name="Jogger Tokio">
                 <img src="img/model5.jpg" alt="">
                 <h3>JOGGER TOKIO</h3>
                 <h2>$52.37 USD</h2>
@@ -126,7 +133,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-name="Jogger Graffiti">
                 <img src="img/model6.jpg" alt="">
                 <h3>JOGGER GRAFFITI</h3>
                 <h2>$77.31 USD</h2>
@@ -135,7 +142,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-name="Remera Real">
                 <img src="img/model7.jpg" alt="">
                 <h3>REMERA REAL</h3>
                 <h2>$43.02 USD</h2>
@@ -144,7 +151,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-name="Gorro Catch">
                 <img src="img/model8.jpg" alt="">
                 <h3>GORRO CATCH</h3>
                 <h2>$13.72 USD</h2>
@@ -155,7 +162,7 @@
         </div>
 
         <div class="cards">
-            <div class="card">
+            <div class="card" data-name="Gafas Moon">
                 <img src="img/model10.webp" alt="">
                 <h3>GAFAS MOON</h3>
                 <h2>$39.90 USD</h2>
@@ -164,7 +171,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-name="Gafas Lance">
                 <img src="img/model11.jpg" alt="">
                 <h3>GAFAS LANCE</h3>
                 <h2>$39.90 USD</h2>
@@ -173,7 +180,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-name="Remera Btb">
                 <img src="img/model12.jpg" alt="">
                 <h3>REMERA BTB</h3>
                 <h2>$43.02 USD</h2>
@@ -182,7 +189,7 @@
                 <hr class="line2">
             </div>
 
-            <div class="card">
+            <div class="card" data-name="Remera Goth">
                 <img src="img/model13.jpg" alt="">
                 <h3>REMERA GOTH</h3>
                 <h2>$43.02 USD</h2>
@@ -193,8 +200,8 @@
         </div>
 
         <section id="home-sales">
-            <div class="cards">
-                <div class="card">
+            <div class="cards" >
+                <div class="card" data-name="Musculos Box">
                     <img src="img/model1.jpg" alt="">
                     <h3>MUSCULOS BOX</h3>
                     <h2>$31.17 USD</h2>
@@ -203,7 +210,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Jogger Old School">
                     <img src="img/model2.jpg" alt="">
                     <h3>JOGGER OLD SCHOOL</h3>
                     <h2>$76.06 USD</h2>
@@ -212,16 +219,16 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Reme Tribal">
                     <img src="img/model3.jpg" alt="">
-                    <h3>REME TRIBAL PRE SALE</h3>
+                    <h3>REME TRIBAL</h3>
                     <h2>$56.86 USD</h2>
                     <button class="btn">BUY</button>
                     <hr class="line">
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Reme Yards">
                     <img src="img/model4.jpg" alt="">
                     <h3>REME YARDS</h3>
                     <h2>$87.28 USD</h2>
@@ -232,7 +239,7 @@
             </div>
 
             <div class="cards">
-                <div class="card">
+                <div class="card" data-name="Catch Pants">
                     <img src="img/model18.jpg" alt="">
                     <h3>CATCH PANTS</h3>
                     <h2>$52.37 USD</h2>
@@ -241,7 +248,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Catch Baggy">
                     <img src="img/model19.jpg" alt="">
                     <h3>CATCH BAGGY</h3>
                     <h2>$56.23 USD</h2>
@@ -250,7 +257,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Straight Catch">
                     <img src="img/model20.jpg" alt="">
                     <h3>STRAIGHT CATCH</h3>
                     <h2>$49.23 USD</h2>
@@ -259,7 +266,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Base Catch">
                     <img src="img/model21.jpg" alt="">
                     <h3>BASE CATCH</h3>
                     <h2>$48.72 USD</h2>
@@ -270,7 +277,7 @@
             </div>
 
             <div class="cards">
-                <div class="card">
+                <div class="card" data-name="Classic Catch">
                     <img src="img/model22.jpg" alt="">
                     <h3>CLASSIC CATCH</h3>
                     <h2>$52.37 USD</h2>
@@ -279,7 +286,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Baggy Catch">
                     <img src="img/model23.jpg" alt="">
                     <h3>BAGGY CATCH</h3>
                     <h2>$67.31 USD</h2>
@@ -288,7 +295,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Black Real">
                     <img src="img/model24.jpg.png" alt="">
                     <h3>BLACK REAL</h3>
                     <h2>$49.02 USD</h2>
@@ -297,7 +304,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Gorro Catch">
                     <img src="img/model26.jpg" alt="">
                     <h3>GORRO CATCH</h3>
                     <h2>$43.72 USD</h2>
@@ -308,7 +315,7 @@
             </div>
 
             <div class="cards">
-                <div class="card">
+                <div class="card" data-name="Bermuda Catch">
                     <img src="img/model27.jpg" alt="">
                     <h3>BERMUDA CATCH</h3>
                     <h2>$52.37 USD</h2>
@@ -317,7 +324,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Collara Catch">
                     <img src="img/model28.jpg" alt="">
                     <h3>COLLAR CATCH</h3>
                     <h2>$46.23 USD</h2>
@@ -326,7 +333,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Rionnera Catch">
                     <img src="img/model29.jpg" alt="">
                     <h3>RINONERA CATCH</h3>
                     <h2>$49.23 USD</h2>
@@ -335,7 +342,7 @@
                     <hr class="line2">
                 </div>
 
-                <div class="card">
+                <div class="card" data-name="Piluso Catch">
                     <img src="img/model30.jpg" alt="">
                     <h3>Piluso CATCH</h3>
                     <h2>$48.72 USD</h2>
@@ -346,7 +353,39 @@
             </div>
         </section>
 
-
+        <footer class="footer">
+            <div class="content">
+    
+                <div class="foot-content">
+                    <a href="index.html">HOME</a>
+                    <a href="shop.html">SHOP</a>
+                    <a href="stores.html">STORES</a>
+                    <a href="login.html">LOGIN</a>
+                </div>
+    
+                <div class="foot-content">
+                    <div class="whatsapp">
+                        <img src="img/whatsapp.png" alt="">
+                        <a href="https://wa.me/+38345725033" class="contact-link">+(383) 45 726 033</a>
+                    </div>
+                    <div class="mail">
+                        <img src="img/dial.png" alt="">
+                        <a href="mailto:catchcomercial@gmail.com" class="contact-link">catchcomercial@gmail.com</a>
+                    </div>
+                    <div class="location">
+                        <img src="img/location.png" alt="">
+                        <p>Godoy Cruz 1720 (CABA)</p>
+                    </div>
+                </div>
+    
+                <div class="foot-content">
+                    <a href=""><img class="insta" src="img/insta.png" alt=""></a>
+    
+                </div>
+    
+            </div>
+        </footer>
+    
         <script src="shop.js"></script>
 </body>
 
